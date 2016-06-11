@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Practice</title>
+    <script>
+        window.onload = function () {
+         var calendar = document.getElementById('day');
+            var data = {
+                byDate: new Date(),
+                maxDate:new Date(2016,05,18)
+            };
+            calendar.setAttribute('min', data.byDate.toLocaleDateString());
+            calendar.setAttribute('max', data.maxDate.toLocaleDateString());
+            var obj = {
+                head: ['Inna', "Irina"],
+                piling:['Alla','Nastia','Toma']
+            };
+           var masWho =  document.Forma.Who.childNodes;
+            alert(masWho[1]);
+        }
+    </script>
+</head>
+<body>
+<form name="Forma">
+    <select name="What">
+    <option value="">Стрижка</option>
+    <option value="">Ногти руки</option>
+    <option value="">Ногти ноги</option>
+    <option value="">Пилинг</option>
+    <option value="">Еще чет</option>
+</select>
+    <select name="Who" id="">
+        <optgroup label="Some here">
+            <option value="">Name1</option>
+            <option value="">Name2</option>
+        </optgroup>
+        <optgroup label="Some other">
+        <option value="">Name3</option>
+        <option value="">Name4</option>
+        <option value="">Name5</option>
+        </optgroup>
+    </select>
+    <input id="day" type="date" value="2016-05-14" min="2016-05-14" >
+</form>
+</body>
+</html>

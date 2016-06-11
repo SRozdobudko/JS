@@ -1,0 +1,89 @@
+﻿<!--
+
+    Оператор with создает новую область видимости и 
+    представляет свойства объекта «object» как локальные переменные. 
+    
+    Оператор with является устаревшим и его использование не желательно. 
+    Его использование запрещено в Strict Mode. Подробнее: http://habrahabr.ru/post/118666/
+
+-->
+
+<html>
+<head>
+    <title>Обьекты, создание</title>
+
+    <script type="text/javascript">
+
+        //        var house = {
+        //            roof: "<img src='Images/Roof.gif'/><br/>",
+        //            secondFloor: "<img src='Images/SecondFloor.gif'/><br/>",
+        //            firstFloor: "<img src='Images/FirstFloor.gif'/><br/>",
+        //            basement: "<img src='Images/Basement.gif'/><br/>",
+        //            address: "<p style='color:green'>UK. London. Muswell Hill. N10<hr/>"
+        //        }
+        //
+        //        with (house) {
+        //            document.write(roof);
+        //            document.write(secondFloor);
+        //            document.write(firstFloor);
+        //            document.write(basement);
+        //        }
+        var students = {
+            'Ivanov': {
+                'Phisics': 5,
+                'Maths': 4,
+                'Chemistry': 5
+            },
+            'Petrov': {
+                'Phisics': 4,
+                'Maths': 5,
+                'Chemistry': 4
+            },
+            'Sidorov': {
+                'Phisics': 3,
+                'Maths': 3,
+                'Chemistry': 3
+            }
+        };
+
+//        var stud = prompt("Wright name of a student (Ivanov, Petrov, Sidorov)");
+//        var prof = prompt("Wright name of a professor (Phisics, Maths, Chemistry)");
+//        for (var i in students) {
+//            if (i == stud) {
+//                for (var j in students[i]) {
+//                    console.log(stud + ' marks: ' + j + " - " + students[i][j]);
+//
+//                    if (j == prof) {
+//                        var prepod = j;
+//                    }
+//
+//                }
+//                console.log("it*s mark : " + prof + ' - ' + students[i][prepod]);
+//
+//            }
+//
+//        }
+
+
+<!-- Taska -->
+        var obj = {
+            name: "Some name",
+            age: 26,
+            sayHi: function () {
+                alert("Hello from " + name);
+            },
+            otherInfo: {
+                city: "Kiev",
+                work: "Front-end",
+            },
+
+        }
+        for (var key in obj) {
+            console.log(obj[key]);
+        }
+    </script>
+
+</head>
+<body>
+</body>
+</html>

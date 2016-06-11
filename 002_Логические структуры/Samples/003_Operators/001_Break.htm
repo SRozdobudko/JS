@@ -1,0 +1,46 @@
+﻿<!--
+
+        Оператор - break.
+
+-->
+
+<html>
+<head>
+    <title>Оператор break</title>
+
+    <script type="text/javascript">
+
+        var count = prompt("Сколько Вы хотите провести иттераций?");
+        var exit = prompt("На какой итерации выйти из цикла?");
+
+        for (var i = 0; i < count; i++) {
+            if (i == exit) {
+                break;
+            }
+            else {
+                document.write(i + "<br />");
+            }
+        }
+        a= prompt("Дай число ","0");
+
+        for (i = 1; i <= a; i++) {
+            if (i == 8 || i == 11 || i == 14)
+                continue;
+            document.write("Значение : " + i + "<br>");
+        }
+//        do {
+//            var ask = prompt('Введите число', '0');
+//        } while (!ask);
+//
+//        for (var i = 1; i <= ask; i++) {
+//            if (i >= 8 && i <= 10 || i == 13 || i == 15 || i == 17) {
+//                continue;
+//            }
+//            console.log('Выводим числа : ' + i);
+//        }
+    </script>
+
+</head>
+<body>
+</body>
+</html>

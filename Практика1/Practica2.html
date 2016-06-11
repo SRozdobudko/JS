@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+        background:url(http://www.fonstola.ru/pic/201111/1600x900/fonstola.ru-55699.jpg)  no-repeat;
+        background-size: cover;
+        margin:0;
+        }
+#Slaider {
+        position:absolute;
+        width:400px;
+        height:400px;
+        top:100px;
+        left:500px;
+        background-color:#139329;
+        border-radius: 118px 150px 200px 200px;}
+#Prev {
+        border-radius: 16px/22px;
+        line-height: 50px;
+        text-align: center;
+        position:absolute;
+        top:500px;
+        left:500px;
+        width:100px;
+        height:50px;
+        background-color:blueviolet;
+        cursor:pointer;
+}
+#Next {
+        border-radius: 16px/22px;
+        line-height: 50px;
+        text-align: center;
+        position:absolute;
+        top:500px;
+        left:800px;
+        width:100px;
+        height:50px;
+        background-color:cornflowerblue;
+        cursor:pointer;
+}
+#Arr {
+                width: 100px;
+                height: 100px;
+                background: #15972c;
+                border-radius: 10px 65px;
+                position: relative;
+                left: 600px;
+                cursor:pointer;
+        }
+#Arr>p {             
+                font-size: 22px;
+                height: inherit;
+                color:#25d92e;
+                font-weight:bold;
+                margin: 0;
+                line-height: 80px;
+                text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <div id="Slaider"> </div>
+   <div id="Prev">Prev</div>
+   <div id="Next">Next</div>
+    <div id="Arr" title="Press it)"><p>Press!</p></div>
+    <script>
+        get = function (id) {
+            return document.getElementById(id);
+        }
+        get("Prev").onclick = function () {
+            get("Slaider").style.backgroundImage = "none";
+            get("Slaider").style.transition = "2s";
+            get("Slaider").style.backgroundColor = "green";
+        }
+
+        get("Next").onclick = function () {
+            get("Slaider").style.backgroundImage = "none";
+            get("Slaider").style.transition = "2s";
+            get("Slaider").style.backgroundColor = "orange";
+        }
+        get("Arr").onclick = function () {
+            var arr = ["#e21d1d", "#FC06D7", "#12EBBC", "#a640dc", "#b81fcf", "#1c8ae8", "url(ob.jpg) 46px -10px no-repeat"];
+            get("Slaider").style.transition = "2s";
+            get("Slaider").style.background = arr[Math.floor(Math.random() * arr.length)];
+            }
+       
+    </script>
+</body>
+</html>

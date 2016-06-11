@@ -1,0 +1,33 @@
+﻿<!--
+
+            concat()
+
+-->
+
+<html>
+<head>
+    <title>Метод concat() пример</title>
+
+    <script type="text/javascript">
+
+        var a = [1, 2, 3];
+
+        var input = prompt("Введите новый элемент массива:", "");
+
+        while (input != null) {
+            document.write(a.join("<br />"));
+            document.write(a.length + "<br />");
+            a = a.concat(input);
+            document.write(a + "<br>");
+            input = prompt("Введите новый элемент массива:", "");
+
+        }
+        document.write("<hr />");
+        document.write(a.join("<br />"));
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

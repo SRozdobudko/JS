@@ -1,0 +1,32 @@
+﻿<!--
+
+    Логическое И (&&) - возвращает true тогда и только тогда 
+    когда оба операнда равны true.
+
+    Таблица истинности логического И (&&):
+            true  && true = true                                1&& 1 = 1       1*1 = 1
+            false && true = false                               0&&1=0          0*1=0
+            true  && false = false                              1&&0=0          0*1=0
+            false && false = false                              0&&0=0          0*0=0
+
+-->
+
+<html>
+<head>
+    <title>Логические операторы</title>
+
+    <script type="text/javascript">
+
+        var a = true;
+        var b = false;
+
+        var res = a && b;
+        alert(true && true && true && NaN && 'Olala')
+        document.write("a && b = " + res + "<br />");
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

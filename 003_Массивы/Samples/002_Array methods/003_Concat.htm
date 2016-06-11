@@ -1,0 +1,65 @@
+﻿<!--
+
+    concat() -  создает и возвращает новый массив, содержащий элементы исходного массива,
+    для которого был вызван метод concat(), и значения всех аргументов, переданных методу concat().
+
+-->
+
+<html>
+<head>
+    <title>Метод concat()</title>
+
+    <script type="text/javascript">
+
+        var a = [1, 2, 3];
+
+        a = a.concat(4, 5);
+        document.write("<p>" + a);  // 1,2,3,4,5
+
+
+        a = a.concat(6, 7, [8, 9]);
+        document.write("<p>" + a);  // 1,2,3,4,5,6,7,8,9
+
+
+        //var students = new Array(); //creating new arrays
+        //var lectors = new Array();
+        //var marks = new Array();
+
+        //var table = new Array(); //creating array for our table
+
+
+
+
+        //students = students.concat("1.Страшила", "2.Лев", "3.Железный дровосек"); //initiating arrays with new data
+        //lectors = lectors.concat("2.Бастинда", "2.Генгема", "3.Урфин Джюс");
+        //marks = marks.concat("Смертельно", "Приемлемо", "Победоносно");
+
+        //document.write(students + "<br>"); //debug
+        //document.write(" _Length_  = " + students.length +  "<br>"); //debug
+        //document.write('Lectors : ' + lectors + "<br>");
+        //document.write('Marks : ' + marks + "<br>");
+
+        //for (var t = 0; t < students.length; t++) {
+        //    table[t] = new Array();
+        //}//adding a lines to our class table ac to the number of students
+
+        //document.write(table+   " ? "+ "<br>"); //debug
+        //document.write(table.length + "<br>"); //debug
+
+
+        ////filling our class table after classworks :)
+
+        //for (var i = 0; i < students.length; i++) {
+
+        //    for (var j = 0; j < lectors.length; j++) {
+        //        document.write(marks[i][j]);
+        //    }
+        //    document.write("<br>");
+        //}
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

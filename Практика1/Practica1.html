@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Try this</title>
+    <style>
+        body {
+        margin:0;
+        background:url(arrow.png) 100% 0 no-repeat;
+        background-position-x:right;
+        background-size:350px 620px;
+        background-color:#460A0A;
+        }
+        #gm {
+            height:575px;
+            width:800px;
+            background:url(http://risovach.ru/upload/2013/10/mem/pila_32427129_big_.jpeg) 0 0 no-repeat;
+            opacity:0.7;
+            border-radius:170px 160px 20px 300px;
+            box-shadow:10px 10px 40px green;
+        }
+        p {
+            margin:5px 15px;
+            color:#b61ca5;
+        }
+        form{
+            width:100px;
+            height:150px;
+            color:#15caea;
+        }
+            form input {
+                margin-top:5px;
+            }
+        #Block {
+          background:#00C5FF;
+          display:block;
+          width:454px;
+          height:30px;
+          position:absolute;
+          right:0;
+          bottom:0;
+          box-shadow:-5px -5px 36px #86FF01;
+        }
+         #Alert, #Confirm, #Prompt{
+            color:#1dcc3b;
+            height:30px;
+            font-weight: bold;
+        }
+        #Test {
+        display:none;
+        }
+        #Start {
+        width:100px;
+        height: 35px;
+        border-radius: 35px;
+        background-color: #495AAB;
+        outline: none;
+        border: none;
+        }
+        #outt {
+        background:red;
+        border:0;
+        width:100px;
+        height:100px;
+        border-radius:50px/50px;
+        margin-top:-10px;
+        color:white;
+        font-weight:bold;
+        font-size:20px;
+        outline:none;
+        position:absolute;
+        bottom:0px;
+        }
+        .wrong {
+        display:none;
+        font-size:34px;
+        text-align:center;
+        margin:70px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Block">     <!--  Кнопки пон нажатию модальные окна всплывают-->
+        <input id="Alert" type="button" value=" Press and you see ... " />
+        <input id="Confirm" type="button" value="Press and you see ..." />
+        <input id="Prompt" type="button" value="Press and you see ..." />
+    </div>
+    <div id="gm"></div> <!-- Кртинка Игра -->
+    <form id="Test">   <!--  Скрытая тестовая форма -->
+
+        <p>Confirm</p>
+        1<input name="Confirm" type="radio" value="1" />
+        2<input name="Confirm" id="Cf" type="radio" value="2" />
+        3<input name="Confirm" type="radio" value="3" />
+        <p>Alert</p>
+        1<input name="Alert" id="Al" type="radio" value="1" />
+        2<input name="Alert" type="radio" value="2" />
+        3<input name="Alert" type="radio" value="3" />
+        <p>Prompt</p>
+        1<input name="Prompt" type="radio" value="1" />
+        2<input name="Prompt" type="radio" value="2" />
+        3<input name="Prompt" id="Pr" type="radio" value="3" />
+
+        <input type="button" id="Start" value="Check" />
+    </form>
+    <button id="outt"> <!--onclick=" window.close()--> Exit</button>   <!-- Кнопка ВЫХОДА -->
+
+
+    <script>
+
+        /*Добавте стили с помощью JS 2-я способами */
+
+        var body = document.getElementsByTagName("body");
+
+        get = function (id) {
+            return document.getElementById(id);
+        }
+        get("Alert").onclick = function () {
+            alert("You see ALERT");
+            document.body.style.background = "#222333";
+        }
+        get("Confirm").onclick = function () {
+            confirm("You see CONFIRM");
+            get("Block").style.background = "white";
+        }
+        get("Prompt").onclick = function () {
+            prompt("You see PROMPT", "YaP");
+
+            document.body.style.transition = "2s";
+
+            get("Block").style.display = "none";
+
+            document.body.style.background = "none";
+            get("gm").style.display = "none";
+
+            document.forms[0].style.position = "absolute";
+            document.forms[0].style.top = "200px";
+            document.forms[0].style.left = "46%";
+            document.forms[0].style.background = "#B2FFE8";
+            document.forms[0].style.borderRadius = "20px 20px 10px 10px";
+
+            get("Test").style.display = "block";
+
+            parag = document.createElement("p");
+            parag.innerHTML = "Fail !!!";
+            document.body.appendChild(parag);
+            parag.setAttribute("class", "wrong");
+
+            get("outt").style.marginTop = "0px";
+            get("outt").style.position = "absolute";
+            get("outt").style.top = "0";
+        }
+
+        get("outt").onclick = function () {
+            out = confirm("Exit ?");
+            if (out) {
+                window.close();
+            }
+        }
+        function Check() {
+            if (get("Al").checked && get("Cf").checked && get("Pr").checked) {
+                document.body.style.backgroundColor = "green";
+                document.body.style.backgroundImage = "url(http://www.gifprikol.com/_ph/64/2/814263132.gif?1443377705)";
+                parag.style.display = "block";
+                parag.style.color = "#35FF73";
+                parag.style.fontSize = "50px";
+                parag.innerHTML = "Congratulations!";
+            }
+            else {
+                get("Start").style.marginTop = "0";
+                parag.style.display = "block";
+                document.body.style.backgroundColor = "rgba(67, 13, 13, 0.83)";
+
+            }
+        }
+        get("Start").onclick = Check;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+﻿<!--
+
+                Метод splice()
+
+-->
+
+<html>
+<head>
+    <title>Метод splice() пример</title>
+
+    <script type="text/javascript">
+
+        var Students = ["Алексей", "Владимир", "Александр", "Владислав", "Елена", "Руслан", "Анна", "Киррил", "Ольга", "Валентин", "Андрей"];
+
+        var from = prompt("Введите индекс человека с которого начать выборку:");
+        var count = prompt("Введите количество человек:");
+
+        var res = Students.splice(from, count);
+        
+        document.write(res.join("<p>"));
+        document.write("<br>");
+        document.write("<hr>");
+        Students.splice(3, 0, 2, 3, 2);
+        document.write(Students.join("<br>"));
+        //var a = [true, false, 0, 0, 0, 12, "Hello", 'a']; 
+        //var a = [1, 0, false, false, false, "ITVDN","Hello", "CBS"];
+        //document.write("Наш массив : " + a + "<br>");
+        //var v = a.splice(0, 6);
+        //document.write("Удалено : " + v + "<br>");
+        //var z = a.splice(1, 1);
+        //document.write("Удалено : " + z + "<br>");
+        //a.splice(0, 0, 1, 0, false, false, false, "ITVDN");
+        //document.write("Вставлено : " + a + "<br>");
+        //a.splice(9, 0, "CBS");
+        //document.write("<br>");
+        //document.write("Получено : " + a);
+
+    </script>
+          
+</head>
+<body>
+</body>
+</html>
